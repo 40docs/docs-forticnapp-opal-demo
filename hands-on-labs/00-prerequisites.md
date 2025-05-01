@@ -29,4 +29,4 @@ Before you begin building and testing custom OPAL policies in FortiCNAPP, ensure
 !!! info "Recommended Tools"
     - `tree`: To view directory structures
     - `jq`: To parse CLI JSON output
-    - Python 3.x: If using automation scripts or MkDocs
+

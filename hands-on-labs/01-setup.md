@@ -74,4 +74,3 @@ allow {
 }
 ```
 
-![Placeholder: policy.rego snippet](images/policy-rego-placeholder.png)
