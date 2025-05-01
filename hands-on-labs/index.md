@@ -1,4 +1,4 @@
----
+FortiCNAPP---
 buttons:
   - title: Hands on Lab - Download
     icon: material-file-download-outline
@@ -25,7 +25,7 @@ Not interested in following along with the full guide and just want a working de
 !!! tip "Practical Demo Available"
     We've condensed the examples in this lab into a ready-to-run GitHub repository:
 
-    🔗 [forticnapp-opal-lab GitHub Repo](https://github.com/40docs/forticnapp-opal-lab)
+    🔗 [lab_forticnapp_opal GitHub Repo](https://github.com/40docs/lab_forticnapp_opal)
 
     This includes:
     - Pre-built `metadata.yaml` and `policy.rego`
@@ -35,8 +35,8 @@ Not interested in following along with the full guide and just want a working de
 To test it:
 
 ```bash
-git clone https://github.com/40docs/forticnapp-opal-lab.git
-cd forticnapp-opal-lab/policies
+git clone https://github.com/40docs/lab_forticnapp_opal.git
+cd lab_forticnapp_opal/policies
 lacework iac policy test -d opal/sample_custom_policy
 ```
 
