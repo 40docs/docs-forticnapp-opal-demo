@@ -94,6 +94,10 @@ Before you begin building and testing custom OPAL policies in FortiCNAPP, ensure
     $HOME/.lacework.toml
     ```
 
+    **To configure the Lacework FortiCNAPP CLI for IaC Security:**
+    1. Run `lacework component install iac` in the Lacework FortiCNAPP CLI.
+    2. The Lacework FortiCNAPP CLI is now configured for IaC. You can now run `lacework iac ....`
+
 ## 💻 Environment
 
 - Unix-based terminal (macOS, Linux, or WSL on Windows)
