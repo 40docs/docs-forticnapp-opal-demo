@@ -73,4 +73,3 @@ allow {
   input.logging[_].target_bucket == "example"
 }
 ```
-
