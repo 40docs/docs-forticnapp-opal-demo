@@ -1,4 +1,4 @@
-FortiCNAPP---
+---
 buttons:
   - title: Hands on Lab - Download
     icon: material-file-download-outline
