@@ -8,37 +8,60 @@ buttons:
       target: _blank
 ---
 
-# FortiCNAPP OPAL CLI Demo
+# FortiCNAPP OPAL Lab
 
-Welcome to the FortiCNAPP OPAL CLI demo. This guide provides step-by-step instructions to get started with OPAL using the FortiCNAPP CLI.
+Welcome to the FortiCNAPP OPAL Lab. This guide walks you through building, testing, and optionally uploading a custom OPAL policy using the FortiCNAPP CLI.
 
-## Sections
+---
 
-- [Prerequisites](00-prerequisites.md)
-- [Setup](01-setup.md)
-- [Demo](02-demo.md)
+## 🔍 Opal Overview
 
-### 🚀 Fast-Forward: Pressed on time? Try this
+OPAL is FortiCNAPP’s infrastructure-as-code (IaC) static analyzer based on the **OPA** framework and **Rego** language. It evaluates AWS, Azure, GCP, and Kubernetes configurations for potential security and compliance violations **before deployment**.
 
-Not interested in following along with the full guide and just want a working demo of FortiCNAPP OPAL?
+You can create custom OPAL policies in Rego and scan your IaC with them using the FortiCNAPP CLI.
 
-!!! tip "Practical Demo Available"
-    We've condensed the examples in this lab into a ready-to-run GitHub repository:
+!!! info "Supported Frameworks"
+    | Framework              | Format         |
+    |------------------------|----------------|
+    | Azure Resource Manager | JSON           |
+    | CloudFormation         | JSON, YAML     |
+    | Kubernetes             | YAML           |
+    | Terraform              | HCL, JSON Plan |
 
-    🔗 [lab_forticnapp_opal GitHub Repo](https://github.com/40docs/lab_forticnapp_opal)
+OPAL supports CI/CD tools such as **Jenkins**, **CircleCI**, and **AWS CodePipeline** via the Lacework FortiCNAPP CLI.
 
-    This includes:
-    - Pre-built `metadata.yaml` and `policy.rego`
-    - Ready-to-use `pass/` and `fail/` Terraform test cases
-    - Directory structure compatible with the CLI
+### 🧠 How It Works
 
-To test it:
+- Converts your IaC into a normalized data structure
+- Evaluates that structure against custom Rego policies
+- Outputs results in **CLI**, **JSON**, or **JUnit.xml**
+- Can be used standalone or integrated into pipelines
+- Policy config can be toggled in `config.yaml` or the UI
+
+---
+
+## 🧪 What You'll Learn
+
+- How to install and configure the FortiCNAPP CLI
+- How to generate a custom OPAL policy with tests
+- How to run and debug policy test results
+- How to upload policies and use them in scans
+
+---
+
+## 🚀 Fast-Forward: Pressed on Time? Try This
+
+Not interested in following the full guide and just want a working demo?
+
+!!! tip "Skip the setup"
+    A working OPAL policy, metadata, and test cases are included in a GitHub repo:
+
+    🔗 [OPAL Demo](https://github.com/40docs/lab_forticnapp_opal)
+
+Clone it and run:
 
 ```bash
 git clone https://github.com/40docs/lab_forticnapp_opal.git
 cd lab_forticnapp_opal/policies
 lacework iac policy test -d opal/sample_custom_policy
 ```
-
-!!! note
-    This skips the setup wizard and lets you see policy test results immediately.
