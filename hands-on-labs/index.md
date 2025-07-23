@@ -56,12 +56,12 @@ Not interested in following the full guide and just want a working demo?
 !!! tip "Skip the setup"
     A working OPAL policy, metadata, and test cases are included in a GitHub repo:
 
-    🔗 [OPAL Demo](https://github.com/40docs/lab_forticnapp_opal)
+    🔗 [OPAL Demo](https://github.com/40docs/lab-forticnapp-opal)
 
 Clone it and run:
 
 ```bash
-git clone https://github.com/40docs/lab_forticnapp_opal.git
-cd lab_forticnapp_opal/policies
+git clone https://github.com/40docs/lab-forticnapp-opal.git
+cd lab-forticnapp-opal/policies
 lacework iac policy test -d opal/sample_custom_policy
 ```
